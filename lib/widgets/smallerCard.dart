@@ -2,13 +2,13 @@ import 'package:anime_test/widgets/ink.dart';
 import 'package:flutter/material.dart';
 
 class SmallerCard extends StatelessWidget {
-  const SmallerCard({
-    this.openContainer,
-    this.subtitle,
-  });
+  const SmallerCard(
+      {this.openContainer, this.subtitle, this.image, this.title});
 
   final VoidCallback openContainer;
   final String subtitle;
+  final String image;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class SmallerCard extends StatelessWidget {
             height: 150,
             child: Center(
               child: Image.asset(
-                'assets/placeholder_image.png',
+                image,
                 width: 80,
               ),
             ),
@@ -36,7 +36,7 @@ class SmallerCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Title',
+                    title,
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   const SizedBox(height: 4),

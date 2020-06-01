@@ -88,6 +88,7 @@ class _OpenContainerTransformDemoState
         padding: const EdgeInsets.all(8.0),
         children: <Widget>[
           OpenContainerWrapper(
+            page: DetailsPage(),
             transitionType: _transitionType,
             closedBuilder: (BuildContext _, VoidCallback openContainer) {
               return ExampleCard(openContainer: openContainer);
@@ -95,6 +96,7 @@ class _OpenContainerTransformDemoState
           ),
           const SizedBox(height: 16.0),
           OpenContainerWrapper(
+            page: DetailsPage(),
             transitionType: _transitionType,
             closedBuilder: (BuildContext _, VoidCallback openContainer) {
               return ExampleSingleTile(openContainer: openContainer);
@@ -103,19 +105,28 @@ class _OpenContainerTransformDemoState
           const SizedBox(height: 16.0),
           Row(
             children: <Widget>[
-              SmallCard(transitionType: _transitionType),
+              SmallCard(
+                transitionType: _transitionType,
+                page: DetailsPage(),
+              ),
               const SizedBox(width: 8.0),
-              SmallCard(transitionType: _transitionType),
+              SmallCard(
+                transitionType: _transitionType,
+                page: DetailsPage(),
+              ),
             ],
           ),
           const SizedBox(height: 16.0),
           Row(
             children: <Widget>[
-              SmallCard(transitionType: _transitionType),
+              SmallCard(transitionType: _transitionType, page: DetailsPage()),
               const SizedBox(width: 8.0),
-              SmallCard(transitionType: _transitionType),
+              SmallCard(transitionType: _transitionType, page: DetailsPage()),
               const SizedBox(width: 8.0),
-              SmallCard(transitionType: _transitionType),
+              SmallCard(
+                transitionType: _transitionType,
+                page: DetailsPage(),
+              ),
             ],
           ),
           const SizedBox(height: 16.0),
