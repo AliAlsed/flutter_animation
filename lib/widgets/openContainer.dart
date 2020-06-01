@@ -1,5 +1,4 @@
 import 'package:animations/animations.dart';
-import 'package:anime_test/pages/detail.dart';
 import 'package:flutter/material.dart';
 
 class OpenContainerWrapper extends StatelessWidget {

@@ -19,14 +19,13 @@ class SmallerCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            color: Colors.black38,
             height: 150,
-            child: Center(
-              child: Image.asset(
-                image,
-                width: 80,
-              ),
-            ),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                      image,
+                    ),
+                    fit: BoxFit.cover)),
           ),
           Expanded(
             child: Padding(

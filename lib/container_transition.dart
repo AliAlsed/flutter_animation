@@ -88,44 +88,105 @@ class _OpenContainerTransformDemoState
         padding: const EdgeInsets.all(8.0),
         children: <Widget>[
           OpenContainerWrapper(
-            page: DetailsPage(),
+            page: DetailsPage(
+              title: 'japan',
+              image: 'assets/img.jpeg',
+              body: ' Asia ',
+            ),
             transitionType: _transitionType,
             closedBuilder: (BuildContext _, VoidCallback openContainer) {
-              return ExampleCard(openContainer: openContainer);
+              return ExampleCard(
+                openContainer: openContainer,
+                title: 'japan',
+                image: 'assets/img.jpeg',
+                body:
+                    'suspendisse in est. Ut ornare lectus sit amet. Eget nunc lobortis mattis '
+                    'aliquam faucibus purus in. Hendrerit gravida rutrum quisque non tellus '
+                    'orci ac auctor. Mattis aliquam faucibus purus in massa. Tellus rutrum ',
+                subtitle: ' Asia ',
+              );
             },
           ),
           const SizedBox(height: 16.0),
           OpenContainerWrapper(
-            page: DetailsPage(),
+            page: DetailsPage(
+              title: 'japan',
+              image: 'assets/img.jpeg',
+              body: ' Asia ',
+            ),
             transitionType: _transitionType,
             closedBuilder: (BuildContext _, VoidCallback openContainer) {
-              return ExampleSingleTile(openContainer: openContainer);
+              return ExampleSingleTile(
+                  title: 'japan',
+                  image: 'assets/img.jpeg',
+                  body: ' Asia ',
+                  subtitle: ' Asia ',
+                  openContainer: openContainer);
             },
           ),
           const SizedBox(height: 16.0),
           Row(
             children: <Widget>[
               SmallCard(
+                image: 'assets/img.jpeg',
+                title: 'japan',
+                subtitle: 'asia',
                 transitionType: _transitionType,
-                page: DetailsPage(),
+                page: DetailsPage(
+                  title: 'japan',
+                  image: 'assets/img.jpeg',
+                  body: ' Asia ',
+                ),
               ),
               const SizedBox(width: 8.0),
               SmallCard(
+                image: 'assets/img.jpeg',
+                title: 'japan',
+                subtitle: 'asia',
                 transitionType: _transitionType,
-                page: DetailsPage(),
+                page: DetailsPage(
+                  title: 'japan',
+                  image: 'assets/img.jpeg',
+                  body: ' Asia ',
+                ),
               ),
             ],
           ),
           const SizedBox(height: 16.0),
           Row(
             children: <Widget>[
-              SmallCard(transitionType: _transitionType, page: DetailsPage()),
-              const SizedBox(width: 8.0),
-              SmallCard(transitionType: _transitionType, page: DetailsPage()),
+              SmallCard(
+                  image: 'assets/img.jpeg',
+                  title: 'japan',
+                  subtitle: 'asia',
+                  transitionType: _transitionType,
+                  page: DetailsPage(
+                    title: 'japan',
+                    image: 'assets/img.jpeg',
+                    body: ' Asia ',
+                  )),
               const SizedBox(width: 8.0),
               SmallCard(
+                  image: 'assets/img.jpeg',
+                  title: 'japan',
+                  subtitle: 'asia',
+                  transitionType: _transitionType,
+                  page: DetailsPage(
+                    title: 'japan',
+                    image: 'assets/img.jpeg',
+                    body: ' Asia ',
+                  )),
+              const SizedBox(width: 8.0),
+              SmallCard(
+                image: 'assets/img.jpeg',
+                title: 'japan',
+                subtitle: 'asia',
                 transitionType: _transitionType,
-                page: DetailsPage(),
+                page: DetailsPage(
+                  title: 'japan',
+                  image: 'assets/img.jpeg',
+                  body: ' Asia ',
+                ),
               ),
             ],
           ),

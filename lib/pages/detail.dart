@@ -32,6 +32,11 @@ const String _loremIpsumParagraph =
     'vitae';
 
 class DetailsPage extends StatelessWidget {
+  final String image;
+  final String title;
+  final String body;
+
+  DetailsPage({this.image, this.title, this.body});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,14 +44,11 @@ class DetailsPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Container(
-            color: Colors.black38,
             height: 250,
-            child: Padding(
-              padding: const EdgeInsets.all(70.0),
-              child: Image.asset(
-                'assets/placeholder_image.png',
-              ),
-            ),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(image), fit: BoxFit.cover)),
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -54,7 +56,7 @@ class DetailsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Title',
+                  title,
                   style: Theme.of(context).textTheme.headline5.copyWith(
                         color: Colors.black54,
                         fontSize: 30.0,

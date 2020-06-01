@@ -2,7 +2,12 @@ import 'package:anime_test/widgets/ink.dart';
 import 'package:flutter/material.dart';
 
 class ExampleSingleTile extends StatelessWidget {
-  const ExampleSingleTile({this.openContainer});
+  final String image;
+  final String title;
+  final String subtitle;
+  final String body;
+  const ExampleSingleTile(
+      {this.openContainer, this.image, this.title, this.body, this.subtitle});
 
   final VoidCallback openContainer;
 
@@ -16,15 +21,10 @@ class ExampleSingleTile extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            color: Colors.black38,
             height: height,
             width: height,
-            child: Center(
-              child: Image.asset(
-                'assets/placeholder_image.png',
-                width: 60,
-              ),
-            ),
+            decoration:
+                BoxDecoration(image: DecorationImage(image: AssetImage(image))),
           ),
           Expanded(
             child: Padding(
@@ -33,14 +33,11 @@ class ExampleSingleTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Title',
+                    title,
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                      'Lorem ipsum dolor sit amet, consectetur '
-                      'adipiscing elit,',
-                      style: Theme.of(context).textTheme.caption),
+                  Text(subtitle, style: Theme.of(context).textTheme.caption),
                 ],
               ),
             ),

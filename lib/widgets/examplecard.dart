@@ -2,7 +2,12 @@ import 'package:anime_test/widgets/ink.dart';
 import 'package:flutter/material.dart';
 
 class ExampleCard extends StatelessWidget {
-  const ExampleCard({this.openContainer});
+  final String image;
+  final String title;
+  final String subtitle;
+  final String body;
+  const ExampleCard(
+      {this.openContainer, this.image, this.title, this.subtitle, this.body});
 
   final VoidCallback openContainer;
 
@@ -16,18 +21,14 @@ class ExampleCard extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              color: Colors.black38,
-              child: Center(
-                child: Image.asset(
-                  'assets/placeholder_image.png',
-                  width: 100,
-                ),
-              ),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(image), fit: BoxFit.cover)),
             ),
           ),
-          const ListTile(
-            title: Text('Title'),
-            subtitle: Text('Secondary text'),
+          ListTile(
+            title: Text(title),
+            subtitle: Text(subtitle),
           ),
           Padding(
             padding: const EdgeInsets.only(
@@ -36,8 +37,7 @@ class ExampleCard extends StatelessWidget {
               bottom: 16.0,
             ),
             child: Text(
-              'Lorem ipsum dolor sit amet, consectetur '
-              'adipiscing elit, sed do eiusmod tempor.',
+              body,
               style: Theme.of(context)
                   .textTheme
                   .bodyText2
